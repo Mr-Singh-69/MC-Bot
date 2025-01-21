@@ -1,16 +1,14 @@
 {
-  "name": "Bot_Name",
+  "name": "24-7-mbe-bot",
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-  "start": "node .",
-  "keep-alive": "node keep_alive.js"
-},
-  "keywords": [],
-  "author": "Your_Name",
-  "license": "MIT",
-  "dependencies": {
-    ""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {  },
+  "devDependencies": {},
   "description": ""
 }
