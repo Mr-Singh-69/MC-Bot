@@ -3,7 +3,7 @@ const http = require('http');
 
 const bot = mineflayer.createBot({
   host: 'PlayCity-Sqya.aternos.me', // Replace with your Java server's IP address
-  port: 25565,            // Default port for Java servers
+  port: 14779,            // Default port for Java servers
   username: 'TheOne'   // Bot's username
 });
 
