@@ -1,5 +1,5 @@
 const mineflayer = require('mineflayer');
-const keepAlive = require('./keep_alive');
+const http = require('http');
 
 const bot = mineflayer.createBot({
   host: 'PlayCity-Sqya.aternos.me', // Replace with your Java server's IP address
@@ -54,8 +54,19 @@ function findAndSleepInBed() {
 bot.on('error', (err) => console.error(`Error: ${err.message}`));
 bot.on('end', () => console.log("Bot has disconnected."));
 
-// Actual code
-// Do It Yourself
+
+
+function keepAlive() {
+  http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.write('Bot is alive!');
+    res.end();
+  }).listen(3000, () => {
+    console.log('Keep-alive server is running on port 3000');
+  });
+}
+
+module.exports = keepAlive; 
 
 keepAlive();
 
